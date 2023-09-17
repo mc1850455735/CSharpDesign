@@ -41,23 +41,23 @@ namespace CSharpDesign
             sql = string.Format("select * from usertable where username = '{0}' and password = '{1}';",
                 username, password);
             command.CommandText = sql;
-            reader = command.ExecuteReader();
-            reader.Read();
-            isAdmin = bool.Parse(reader["isAdmin"].ToString());
-            if (reader != null)
+            try
             {
-                if(isAdmin)
+                reader = command.ExecuteReader();
+                reader.Read();
+                isAdmin = bool.Parse(reader["isAdmin"].ToString());
+                if (isAdmin)
                     new AdminForm().Show();
                 else
                     new UserForm().Show();
                 this.Visible = false;
             }
-            else
+            catch (Exception ex)
             {
                 MessageBox.Show("未找到用户");
             }
-
-            conn.Close();
+            finally
+            { conn.Close(); }
         }
 
         private void lblChangePassword_Click(object sender, EventArgs e)

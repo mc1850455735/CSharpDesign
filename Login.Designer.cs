@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblChangePassword = new System.Windows.Forms.Label();
+            this.lblChangePassword = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -81,11 +81,12 @@
             // lblChangePassword
             // 
             this.lblChangePassword.AutoSize = true;
-            this.lblChangePassword.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblChangePassword.Location = new System.Drawing.Point(410, 311);
+            this.lblChangePassword.LinkColor = System.Drawing.Color.Black;
+            this.lblChangePassword.Location = new System.Drawing.Point(407, 299);
             this.lblChangePassword.Name = "lblChangePassword";
             this.lblChangePassword.Size = new System.Drawing.Size(67, 15);
-            this.lblChangePassword.TabIndex = 3;
+            this.lblChangePassword.TabIndex = 6;
+            this.lblChangePassword.TabStop = true;
             this.lblChangePassword.Text = "修改密码";
             this.lblChangePassword.Click += new System.EventHandler(this.lblChangePassword_Click);
             // 
@@ -116,7 +117,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblChangePassword;
+        private System.Windows.Forms.LinkLabel lblChangePassword;
     }
 }
 
