@@ -38,22 +38,22 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(278, 158);
+            this.txtUserName.Location = new System.Drawing.Point(113, 38);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 25);
+            this.txtUserName.Size = new System.Drawing.Size(243, 25);
             this.txtUserName.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(278, 226);
+            this.txtPassword.Location = new System.Drawing.Point(113, 88);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 25);
+            this.txtPassword.Size = new System.Drawing.Size(243, 25);
             this.txtPassword.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 168);
+            this.label1.Location = new System.Drawing.Point(35, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 236);
+            this.label2.Location = new System.Drawing.Point(50, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(218, 287);
+            this.btnLogin.Location = new System.Drawing.Point(113, 136);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(121, 39);
             this.btnLogin.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.lblChangePassword.AutoSize = true;
             this.lblChangePassword.LinkColor = System.Drawing.Color.Black;
-            this.lblChangePassword.Location = new System.Drawing.Point(407, 299);
+            this.lblChangePassword.Location = new System.Drawing.Point(281, 148);
             this.lblChangePassword.Name = "lblChangePassword";
             this.lblChangePassword.Size = new System.Drawing.Size(67, 15);
             this.lblChangePassword.TabIndex = 6;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 443);
+            this.ClientSize = new System.Drawing.Size(434, 219);
             this.Controls.Add(this.lblChangePassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
@@ -104,6 +104,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.preForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

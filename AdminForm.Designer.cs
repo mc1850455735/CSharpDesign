@@ -43,6 +43,7 @@
             this.btnManaUser.TabIndex = 0;
             this.btnManaUser.Text = "用户管理";
             this.btnManaUser.UseVisualStyleBackColor = true;
+            this.btnManaUser.Click += new System.EventHandler(this.btnManaUser_Click);
             // 
             // btnManaSub
             // 

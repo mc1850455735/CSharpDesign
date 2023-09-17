@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 86);
+            this.label1.Location = new System.Drawing.Point(51, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 136);
+            this.label2.Location = new System.Drawing.Point(51, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 0;
@@ -58,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 198);
+            this.label3.Location = new System.Drawing.Point(53, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 0;
@@ -66,28 +66,28 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(190, 85);
+            this.txtName.Location = new System.Drawing.Point(132, 48);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(221, 25);
             this.txtName.TabIndex = 1;
             // 
             // txtOld
             // 
-            this.txtOld.Location = new System.Drawing.Point(190, 133);
+            this.txtOld.Location = new System.Drawing.Point(132, 103);
             this.txtOld.Name = "txtOld";
             this.txtOld.Size = new System.Drawing.Size(221, 25);
             this.txtOld.TabIndex = 1;
             // 
             // txtNew
             // 
-            this.txtNew.Location = new System.Drawing.Point(190, 195);
+            this.txtNew.Location = new System.Drawing.Point(132, 158);
             this.txtNew.Name = "txtNew";
             this.txtNew.Size = new System.Drawing.Size(221, 25);
             this.txtNew.TabIndex = 1;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(190, 270);
+            this.btnConfirm.Location = new System.Drawing.Point(132, 214);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(100, 34);
             this.btnConfirm.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 403);
+            this.ClientSize = new System.Drawing.Size(414, 300);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtNew);
             this.Controls.Add(this.txtOld);
@@ -110,6 +110,7 @@
             this.Name = "ChangePasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "修改密码";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChangePasswordForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,45 @@ namespace CSharpDesign
 {
     public partial class ChangePasswordForm : Form
     {
-        List<User> list = new List<User>();
+        string sql;
+        string connString = Properties.Resources.connString;
+
+        MySqlConnection conn;
+        MySqlCommand command;
+
         public ChangePasswordForm()
         {
             InitializeComponent();
-            list = LoadFromDB.loadData();
+            conn = new MySqlConnection(connString);
+            command = new MySqlCommand();
+            command.Connection = conn;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             string username = txtName.Text;
             string password = txtOld.Text;
+            string newpassword = txtNew.Text;
+
+            conn.Open();
+            sql = string.Format("update usertable set password = '{0}' where username = '{1}' and password = '{2}';",
+                newpassword, username, password);
+            command.CommandText = sql;
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("更新成功");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("用户名或密码错误");
+            }
+            finally
+            { conn.Close(); }
+        }
+
+        private void ChangePasswordForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             
         }
     }

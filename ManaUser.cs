@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CSharpDesign
 {
-    public partial class AdminForm : Form
+    public partial class ManaUser : Form
     {
-        public AdminForm()
+        public ManaUser()
         {
             InitializeComponent();
-        }
-
-        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnManaUser_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

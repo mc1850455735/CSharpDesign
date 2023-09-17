@@ -52,7 +52,7 @@ namespace CSharpDesign
                     new UserForm().Show();
                 this.Visible = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("未找到用户");
             }
@@ -63,6 +63,11 @@ namespace CSharpDesign
         private void lblChangePassword_Click(object sender, EventArgs e)
         {
             new ChangePasswordForm().ShowDialog();
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
