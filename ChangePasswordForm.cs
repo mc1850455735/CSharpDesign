@@ -33,21 +33,17 @@ namespace CSharpDesign
             string password = txtOld.Text;
             string newpassword = txtNew.Text;
 
-            conn.Open();
             sql = string.Format("update usertable set password = '{0}' where username = '{1}' and password = '{2}';",
                 newpassword, username, password);
-            command.CommandText = sql;
-            try
+
+            if(SQLCommand.ExecuteCommand(sql))
             {
-                command.ExecuteNonQuery();
                 MessageBox.Show("更新成功");
             }
-            catch (Exception)
+            else
             {
                 MessageBox.Show("用户名或密码错误");
             }
-            finally
-            { conn.Close(); }
         }
 
         private void ChangePasswordForm_FormClosed(object sender, FormClosedEventArgs e)

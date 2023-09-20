@@ -16,5 +16,10 @@ namespace CSharpDesign
         {
             InitializeComponent();
         }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
